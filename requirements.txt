@@ -1,0 +1,12 @@
+torch>=2.3
+torchvision
+ultralytics==8.4.172
+opencv-python
+numpy
+pandas
+scipy
+matplotlib
+pyyaml
+segmentation-models-pytorch
+hydra-core
+iopath

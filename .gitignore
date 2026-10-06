@@ -1,0 +1,10 @@
+data/*
+!data/.gitkeep
+weights/*
+!weights/.gitkeep
+results/
+runs/
+third_party/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
