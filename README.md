@@ -11,7 +11,6 @@ All results are on the Kaggle test set (410 Sentinel-2 images). Metrics are pixe
 | # | Configuration | IoU | Dice/F1 | Precision | Recall | Specificity | Pixel Acc. | Balanced Acc. |
 |---|---|---|---|---|---|---|---|---|
 | S.No. | Model / Configuration | IoU | Dice/F1 | Prec. | Recall | Spec. | Pix. Acc. | Bal. Acc. | Params |
-|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | 1 | YOLO11n-seg | 0.7511 | 0.8579 | 0.8950 | 0.8237 | 0.9877 | 0.9737 | 0.9067 | 2.9M |
 | 2 | YOLO11s-seg | 0.7117 | 0.8315 | 0.8172 | 0.7605 | 0.8927 | 0.9703 | 0.8766 | 10.1M |
 | 3 | YOLO11m-seg | 0.7021 | 0.8250 | 0.8368 | 0.7370 | 0.9947 | 0.9698 | 0.8659 | 22.4M |
