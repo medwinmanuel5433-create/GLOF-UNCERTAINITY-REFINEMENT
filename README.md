@@ -38,6 +38,8 @@ All results are on the Kaggle test set (410 Sentinel-2 images). Metrics are pixe
 | Test | 1640 | 1640 |
 | **Total** | **2437** | **2437** |
 
+| GLOF dataset (all splits, one zip) | Everything | [GLOF_dataset_final.zip](https://github.com/medwinmanuel5433-create/GLOF-UNCERTAINITY-REFINEMENT/releases/download/v1.0/GLOF_dataset_final.zip) | CC BY 4.0 |
+
 One class (`lake`). The test set comes from a different provider and sensor and is never used for training or tuning. Both sources are CC BY 4.0.
 
 Put the data in this layout:
