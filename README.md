@@ -1,11 +1,11 @@
-# Glacial Lake Segmentation using YOLOv11m-seg and SAM2 with Uncertainty-Guided Refinement
+﻿# Glacial Lake Segmentation using YOLOv11m-seg and SAM2 with Uncertainty-Guided Refinement
 
 Glacial lakes are segmented in three steps. YOLOv11m-seg finds each lake and gives a box and a rough mask. SAM2 (Hiera-B+) segments the lake from the box. Where the YOLO mask and the SAM2 mask disagree, the framework places a corrective click: a positive click where YOLO sees lake and SAM2 does not, and a negative click where SAM2 sees lake and YOLO does not. The click goes to the point where SAM2's attention entropy is highest (where SAM2 is least certain). SAM2 is run again with the click, up to five times, and stops when the mask no longer changes (IoU between masks ≥ 0.95) or no uncertain disagreement is left. A 3×3 opening and closing cleans the final mask. The correction needs no training and no user input.
 
 ## Results
 
 All results are on the Kaggle test set (410 Sentinel-2 images). Metrics are pixel-level, pooled over all test images.
-Full tables and figures: [docs/GLOF_RESULTS.docx](docs/GLOF_RESULTS.docx)
+Full tables and figures: [docs/GLOF_RESULTS.pdf](docs/GLOF_RESULTS.pdf)
 
 ### Component-wise ablation
 
