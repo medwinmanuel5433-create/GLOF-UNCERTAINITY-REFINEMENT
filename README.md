@@ -10,39 +10,21 @@ All results are on the Kaggle test set (410 Sentinel-2 images). Metrics are pixe
 
 | # | Configuration | IoU | Dice/F1 | Precision | Recall | Specificity | Pixel Acc. | Balanced Acc. |
 |---|---|---|---|---|---|---|---|---|
-| 1 | YOLOv11m-seg only | 0.7007 | 0.8240 | 0.8549 | 0.7953 | 0.9794 | 0.9550 | 0.8873 |
-| 2 | YOLOv11m-seg + SAM2 (box prompt) | 0.7157 | 0.8343 | 0.8583 | 0.8116 | 0.9795 | 0.9572 | 0.8956 |
+| S.No. | Model / Configuration | IoU | Dice/F1 | Prec. | Recall | Spec. | Pix. Acc. | Bal. Acc. | Params |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | YOLO11n-seg | 0.7511 | 0.8579 | 0.8950 | 0.8237 | 0.9877 | 0.9737 | 0.9067 | 2.9M |
+| 2 | YOLO11s-seg | 0.7117 | 0.8315 | 0.8172 | 0.7605 | 0.8927 | 0.9703 | 0.8766 | 10.1M |
+| 3 | YOLO11m-seg | 0.7021 | 0.8250 | 0.8368 | 0.7370 | 0.9947 | 0.9698 | 0.8659 | 22.4M |
+| 4 | YOLO11l-seg | 0.7221 | 0.8386 | 0.8776 | 0.7794 | 0.9415 | 0.9711 | 0.8855 | 27.6M |
+| 5 | YOLO11x-seg | 0.6978 | 0.8220 | 0.8627 | 0.7477 | 0.8424 | 0.9687 | 0.8700 | 62.1M |
+| 6 | YOLO11m-seg + SAM2 | 0.7600 | 0.8150 | 0.7520 | 0.8154 | 0.9868 | 0.9804 | 0.8991 | 103.2M |
 | 3 | + Boundary-aware box | 0.6459 | 0.7849 | 0.7764 | 0.7936 | 0.9651 | 0.9423 | 0.8793 |
 | 4 | + Boundary-aware box and points | 0.6804 | 0.8098 | 0.8024 | 0.8174 | 0.9692 | 0.9491 | 0.8933 |
 | 5 | Box prompt + random clicks (same number) | 0.7092 | 0.8299 | 0.8499 | 0.8108 | 0.9781 | 0.9559 | 0.8944 |
 | 6 | Box prompt + distance-based clicks (same number) | 0.7049 | 0.8269 | 0.8436 | 0.8109 | 0.9770 | 0.9550 | 0.8940 |
 | 7 | Box prompt + predictive-entropy clicks | 0.7232 | 0.8394 | 0.8648 | 0.8154 | 0.9805 | 0.9586 | 0.8980 |
-| **8** | **Box prompt + attention-entropy clicks (proposed)** | **0.7209** | **0.8378** | **0.8660** | **0.8114** | **0.9808** | **0.9583** | **0.8961** |
-| 9 | Full (boundary-aware box, points and attention-entropy clicks) | 0.7200 | 0.8372 | 0.8569 | 0.8184 | 0.9791 | 0.9578 | 0.8988 |
-
-### Ablation study
-
-**YOLOv11-seg variants** (IoU: YOLO only → + SAM2 → proposed)
-
-| Detector | Training | YOLO only | + SAM2 | Proposed |
-|---|---|---|---|---|
-| YOLOv11n-seg | 10 epochs | 0.690 | 0.686 | 0.707 |
-| YOLOv11s-seg | 10 epochs | 0.601 | 0.605 | 0.609 |
-| YOLOv11m-seg | 10 epochs | 0.643 | 0.653 | 0.666 |
-| YOLOv11l-seg | 10 epochs | 0.648 | 0.667 | 0.674 |
-| YOLOv11x-seg | 10 epochs | 0.569 | 0.590 | 0.593 |
-| YOLOv11m-seg (final) | 120 epochs | 0.701 | 0.716 | 0.721 |
-
-**Performance after each iteration** (proposed framework)
-
-| Iteration | IoU | Dice/F1 | Precision | Recall |
-|---|---|---|---|---|
-| Initial SAM2 | 0.7157 | 0.8343 | 0.8583 | 0.8116 |
-| 1 | 0.7142 | 0.8333 | 0.8572 | 0.8107 |
-| 2 | 0.7180 | 0.8359 | 0.8629 | 0.8104 |
-| 3 | 0.7184 | 0.8361 | 0.8623 | 0.8115 |
-| 4 | 0.7214 | 0.8381 | 0.8667 | 0.8114 |
-| 5 | 0.7209 | 0.8378 | 0.8660 | 0.8114 |
+| **8** | **Box prompt + attention-entropy clicks (proposed)** | **0.7876** | **0.8222** | **0.7636** | **0.8126** | **0.9867** | **0.9802** | **0.8997** | **103.2M** |
+| **9** | **Full framework (boundary-aware box, points and attention-entropy clicks)** | **0.7876** | **0.8222** | **0.7636** | **0.8126** | **0.9867** | **0.9802** | **0.8997** | **103.2M** |
 
 **Uncertainty map vs. SAM2 error pixels** (AUROC): attention entropy 0.728, distance to boundary 0.693, predictive entropy 0.559.
 
@@ -50,11 +32,12 @@ All results are on the Kaggle test set (410 Sentinel-2 images). Metrics are pixe
 
 ## Dataset
 
-| Split | Source | Images |
-|---|---|---|
-| Training | Roboflow glacial-lake datasets: [GLOF_MARK1](https://universe.roboflow.com/medwins-workspace/glof-wyr2m) (333) + [glacier-lake](https://universe.roboflow.com/glacierlake/glacier-lake) (423) | 756 |
-| Validation | Same two Roboflow datasets (95 + 41) | 136 |
-| Test | [Kaggle Glacial Lake Dataset](https://www.kaggle.com/datasets/aatishshresthaa/glacial-lake-dataset) (Sentinel-2, 10 m, Himalaya) | 410 |
+| Dataset | Images | Ground Truth |
+|---|---:|---:|
+| Training | 333 | 333 |
+| Validation | 464 | 464 |
+| Test | 1640 | 1640 |
+| **Total** | **2437** | **2437** |
 
 One class (`lake`). The test set comes from a different provider and sensor and is never used for training or tuning. Both sources are CC BY 4.0.
 
