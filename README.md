@@ -5,6 +5,7 @@ Glacial lakes are segmented in three steps. YOLOv11m-seg finds each lake and giv
 ## Results
 
 All results are on the Kaggle test set (410 Sentinel-2 images). Metrics are pixel-level, pooled over all test images.
+Full tables and figures: [docs/GLOF_RESULTS.docx](docs/GLOF_RESULTS.docx)
 
 ### Component-wise ablation
 
