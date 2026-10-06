@@ -45,16 +45,13 @@ One class (`lake`). The test set comes from a different provider and sensor and 
 Put the data in this layout:
 
 ```
-data/
-├── roboflow/                 # YOLO-seg format (made by scripts/prepare_roboflow.py)
-│   ├── data.yaml
-│   ├── train/{images,labels}/
-│   └── valid/{images,labels}/
-└── kaggle_test/
-    ├── images/               # image_1.png ... image_410.png
-    └── masks/                # binary masks with the same file names
+data/GLOF_dataset_final/
+├── images/{train,valid,test}/   # RGB images (.jpg / .png)
+├── labels/{train,valid,test}/   # YOLO segmentation polygons, class 0 = lake
+├── masks/{train,valid,test}/    # binary masks (255 = lake), same file names as the images
+├── data.yaml                    # YOLO training config
+└── manifest.csv                 # source and split of every image
 ```
-
 To build `data/roboflow` from the two Roboflow COCO-segmentation exports:
 
 ```bash
