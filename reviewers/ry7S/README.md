@@ -129,12 +129,3 @@ We provide additional cases covering snow/ice, cloud/haze-like surroundings, low
 | Parameters | 103.2M (no additional parameters) |
 
 ---
-
-## Changes to the main paper
-
-| Item | Where it goes in the revised paper |
-|---|---|
-| Implementation settings (above) | Experimental setup / implementation details section |
-| Table 3 (dataset distribution) | Dataset section |
-| Table 2 (challenging conditions) + Figs. 2–4, 8 | Results — qualitative and condition-wise analysis; failure cases in Limitations |
-| Table 1, Figs. 5–7 | Supplementary material (contains training/validation images) |
