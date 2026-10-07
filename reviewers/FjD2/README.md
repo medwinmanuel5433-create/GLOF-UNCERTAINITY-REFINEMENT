@@ -5,7 +5,7 @@
 
 [← Back to main README](../../README.md) · Other reviewers: [ry7S](../ry7S/README.md) · [7hF5](../7hF5/README.md)
 
-We thank the reviewer for the detailed review. This page is a self-contained response: tables and figures are numbered locally (the number used in the submitted rebuttal text is shown beside each heading). It collects every table and figure cited in our response to Reviewer FjD2.
+We thank the reviewer for the detailed review. This page is a self-contained response: tables and figures are numbered locally and match the numbers in our rebuttal text. It collects every table and figure cited in our response to Reviewer FjD2.
 
 | Points | Topic | Evidence on this page |
 |---|---|---|
@@ -19,7 +19,7 @@ We thank the reviewer for the detailed review. This page is a self-contained res
 
 ## R1–R3 — Improvement and component-wise ablation
 
-### Table 1: Performance of YOLOv11 variants and component-wise ablation <sub>(rebuttal Table 2)</sub>
+### Table 1: Performance of YOLOv11 variants and component-wise ablation
 
 | # | Model / Configuration | IoU | Dice/F1 | Prec. | Recall | Spec. | Pix. Acc. | Bal. Acc. | Params |
 |---|---|---|---|---|---|---|---|---|---|
@@ -47,7 +47,7 @@ We thank the reviewer for the detailed review. This page is a self-contained res
 
 ## R4–R6 — Dataset and comparison
 
-### Table 2: Dataset distribution <sub>(rebuttal Table 1)</sub>
+### Table 2: Dataset distribution
 
 | Dataset | Source | Images | Ground truth |
 |---|---|---|---|
@@ -126,7 +126,7 @@ IoU ≥ 0.95 between consecutive masks is used **only as a stability stopping co
 | Distance to boundary | 0.693 |
 | Predictive entropy | 0.559 |
 
-### Table 6: Computational cost on an NVIDIA T4 GPU <sub>(rebuttal Table 7)</sub>
+### Table 6: Computational cost on an NVIDIA T4 GPU
 
 | Component | Value |
 |---|---|
@@ -145,7 +145,7 @@ The correction loop adds about **12 ms per image** (+2.9%) over direct YOLOv11m-
 
 ## R19–R22 — Limitations and novelty
 
-### Table 7: IoU and Dice under challenging conditions <sub>(rebuttal Table 6)</sub>
+### Table 7: IoU and Dice under challenging conditions
 
 | Condition | Images | IoU (YOLOv11m-seg + SAM2) | Dice (YOLOv11m-seg + SAM2) | IoU (Proposed) | Dice (Proposed) |
 |---|---|---|---|---|---|
@@ -177,11 +177,11 @@ The method slightly underperforms the baseline on single-lake images.
 
 Our contribution is **automatic, uncertainty-ranked iterative correction within YOLO–SAM2 disagreement regions**, with no user clicks and no additional trainable correction parameters.
 
-### Fig. 1: Cases where the correction fails <sub>(rebuttal Fig. 8)</sub>
+### Fig. 1: Cases where the correction fails
 
 ![Fig. 1](figures/fig01_failure_cases.jpg)
 
-### Fig. 2: Lakes missed by YOLOv11m-seg but found by SAM2 <sub>(rebuttal Fig. 9)</sub>
+### Fig. 2: Lakes missed by YOLOv11m-seg but found by SAM2
 
 ![Fig. 2](figures/fig02_missed_by_yolo_found_by_sam2.jpg)
 

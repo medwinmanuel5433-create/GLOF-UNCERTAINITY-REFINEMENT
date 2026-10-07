@@ -5,7 +5,7 @@
 
 [← Back to main README](../../README.md) · Other reviewers: [FjD2](../FjD2/README.md) · [7hF5](../7hF5/README.md)
 
-We thank the reviewer for the positive assessment. This page is a self-contained response: tables and figures are numbered locally (the number used in the submitted rebuttal text is shown beside each heading). It collects every table and figure cited in our response to Reviewer ry7S.
+We thank the reviewer for the positive assessment. This page is a self-contained response: tables and figures are numbered locally and match the numbers in our rebuttal text. It collects every table and figure cited in our response to Reviewer ry7S.
 
 | Point | Topic | Evidence on this page |
 |---|---|---|
@@ -18,7 +18,7 @@ We thank the reviewer for the positive assessment. This page is a self-contained
 
 We provide additional cases covering snow/ice, cloud/haze-like surroundings, low-contrast boundaries, terrain shadow and debris, plus failure examples.
 
-### Table 1: Results for each Roboflow hard-case image <sub>(rebuttal Table 9)</sub>
+### Table 1: Results for each Roboflow hard-case image
 
 | Case | Split | YOLOv11m-seg + SAM2 IoU | YOLOv11m-seg + SAM2 Dice | Proposed IoU | Proposed Dice | Proposed Precision | Proposed Recall | Clicks |
 |---|---|---|---|---|---|---|---|---|
@@ -35,7 +35,7 @@ We provide additional cases covering snow/ice, cloud/haze-like surroundings, low
 
 > **Note.** These nine images include training, validation and test samples. They illustrate behaviour on difficult cases and are **not** presented as independent generalisation evidence.
 
-### Table 2: IoU and Dice under challenging conditions <sub>(rebuttal Table 6)</sub>
+### Table 2: IoU and Dice under challenging conditions
 
 | Condition | Images | IoU (YOLOv11m-seg + SAM2) | Dice (YOLOv11m-seg + SAM2) | IoU (Proposed) | Dice (Proposed) |
 |---|---|---|---|---|---|
@@ -106,7 +106,7 @@ We provide additional cases covering snow/ice, cloud/haze-like surroundings, low
 | Evaluation | IoU, Dice/F1, Precision, Recall on the Kaggle Sentinel-2 test set (1,640 images) |
 | Hardware | NVIDIA T4 GPU |
 
-### Table 3: Dataset distribution <sub>(rebuttal Table 1)</sub>
+### Table 3: Dataset distribution
 
 | Dataset | Source | Images | Ground truth |
 |---|---|---|---|
@@ -115,7 +115,7 @@ We provide additional cases covering snow/ice, cloud/haze-like surroundings, low
 | Test | Kaggle Glacial Lake Dataset (Sentinel-2, 10 m, Himalaya) | 1640 | 1640 |
 | **Total** | All datasets combined | **2437** | **2437** |
 
-### Table 4: Computational cost on an NVIDIA T4 GPU <sub>(rebuttal Table 7)</sub>
+### Table 4: Computational cost on an NVIDIA T4 GPU
 
 | Component | Value |
 |---|---|

@@ -5,7 +5,7 @@
 
 [← Back to main README](../../README.md) · Other reviewers: [ry7S](../ry7S/README.md) · [FjD2](../FjD2/README.md)
 
-We thank the reviewer for raising these concerns. This page is a self-contained response: tables and figures are numbered locally (the number used in the submitted rebuttal text is shown beside each heading). It collects every table and figure cited in our response to Reviewer 7hF5.
+We thank the reviewer for raising these concerns. This page is a self-contained response: tables and figures are numbered locally and match the numbers in our rebuttal text. It collects every table and figure cited in our response to Reviewer 7hF5.
 
 | Points | Topic | Evidence on this page |
 |---|---|---|
@@ -35,7 +35,7 @@ Columns: (1) input, (2) YOLOv11m-seg detection, (3) SAM2 from the YOLO box, (4) 
 
 ![Fig. 1](figures/fig01_step_by_step_correction.jpg)
 
-### Table 1: Comparison with related prompt-refinement approaches <sub>(rebuttal Table 8)</sub>
+### Table 1: Comparison with related prompt-refinement approaches
 
 | Approach | Needs training | Needs user clicks | Iterative correction | Uses model uncertainty |
 |---|---|---|---|---|
@@ -76,7 +76,7 @@ Columns: (1) input, (2) YOLOv11m-seg detection, (3) SAM2 from the YOLO box, (4) 
 
 ## R5 — Alternative data split
 
-### Table 3: Primary vs alternative data-split strategy <sub>(rebuttal Table 10)</sub>
+### Table 3: Primary vs alternative data-split strategy
 
 | Data-split strategy | Training | Validation | Test | IoU | Dice/F1 | Precision | Recall |
 |---|---|---|---|---|---|---|---|
@@ -89,7 +89,7 @@ The two test populations differ, so we present this as evidence under another sp
 
 ## R6 — Generalisation
 
-### Table 4: Dataset distribution <sub>(rebuttal Table 1)</sub>
+### Table 4: Dataset distribution
 
 | Dataset | Source | Images | Ground truth |
 |---|---|---|---|

@@ -4,7 +4,7 @@ Glacial lakes are segmented in three steps. YOLOv11m-seg finds each lake and giv
 
 ## ICVGIP 2026 — Submission 485: Rebuttal
 
-We thank the Area Chair and the reviewers. Each reviewer has a separate, self-contained page with its own tables and figures, numbered from 1. The number used in the submitted rebuttal text is shown beside each heading.
+We thank the Area Chair and the reviewers. Each reviewer has a separate, self-contained page with its own tables and figures, numbered from 1. These numbers match the rebuttal text for that reviewer.
 
 | Reviewer | Points addressed | Tables | Figures | Page |
 |---|---|---|---|---|
