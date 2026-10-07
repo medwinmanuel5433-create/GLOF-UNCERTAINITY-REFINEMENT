@@ -2,6 +2,18 @@
 
 Glacial lakes are segmented in three steps. YOLOv11m-seg finds each lake and gives a box and a rough mask. SAM2 (Hiera-B+) segments the lake from the box. Where the YOLO mask and the SAM2 mask disagree, the framework places a corrective click: a positive click where YOLO sees lake and SAM2 does not, and a negative click where SAM2 sees lake and YOLO does not. The click goes to the point where SAM2's attention entropy is highest (where SAM2 is least certain). SAM2 is run again with the click, up to five times, and stops when the mask no longer changes (IoU between masks ≥ 0.95) or no uncertain disagreement is left. A 3×3 opening and closing cleans the final mask. The correction needs no training and no user input.
 
+## ICVGIP 2026 — Submission 485: Rebuttal
+
+We thank the Area Chair and the reviewers. Each reviewer has a separate, self-contained page with its own tables and figures, numbered from 1. The number used in the submitted rebuttal text is shown beside each heading.
+
+| Reviewer | Points addressed | Tables | Figures | Page |
+|---|---|---|---|---|
+| **ry7S** | R1 challenging cases · R2 reproducibility | 4 | 8 | [**Open →**](reviewers/ry7S/README.md) |
+| **FjD2** | R1–R3 ablation · R4–R6 dataset and comparison · R7–R13 reproducibility · R14–R18 iterations, uncertainty, cost · R19–R22 limitations and novelty | 8 | 2 | [**Open →**](reviewers/FjD2/README.md) |
+| **7hF5** | R1, R3, R4 novelty · R2 YOLO variants · R5 alternative split · R6 generalisation | 4 | 1 | [**Open →**](reviewers/7hF5/README.md) |
+
+All tables and figures in one file: [docs/GLOF_RESULTS.pdf](docs/GLOF_RESULTS.pdf)
+
 ## Results
 
 All results are on the Kaggle test set (410 Sentinel-2 images). Metrics are pixel-level, pooled over all test images.
@@ -106,9 +118,3 @@ python scripts/baselines.py                  # results/baselines/
 ## License
 
 Code: MIT. Data: CC BY 4.0 (Roboflow datasets and Kaggle Glacial Lake Dataset).
-
-## Responses by reviewer
-
-- [Reviewer ry7S](reviewers/ry7S/README.md) - challenging cases, reproducibility
-- [Reviewer FjD2](reviewers/FjD2/README.md) - ablation, dataset, comparison, iterations, uncertainty, cost, limitations
-- [Reviewer 7hF5](reviewers/7hF5/README.md) - novelty, YOLO variants, alternative split, generalisation
