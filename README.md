@@ -106,3 +106,9 @@ python scripts/baselines.py                  # results/baselines/
 ## License
 
 Code: MIT. Data: CC BY 4.0 (Roboflow datasets and Kaggle Glacial Lake Dataset).
+
+## Responses by reviewer
+
+- [Reviewer ry7S](reviewers/ry7S/README.md) - challenging cases, reproducibility
+- [Reviewer FjD2](reviewers/FjD2/README.md) - ablation, dataset, comparison, iterations, uncertainty, cost, limitations
+- [Reviewer 7hF5](reviewers/7hF5/README.md) - novelty, YOLO variants, alternative split, generalisation
