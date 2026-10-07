@@ -189,16 +189,3 @@ Fig. 2 shows the dependence on detection: a lake missed by the YOLO **mask** can
 
 ---
 
-## Changes to the main paper
-
-| Item | Where it goes in the revised paper |
-|---|---|
-| **Table 8** (related prompt-refinement approaches) | **Section 4.5, page 8** |
-| Table 1 (YOLO variants + component-wise ablation) | Ablation study section |
-| Table 3(a) (same data, same test set) | Main comparison table in Results; Table 3(b) kept as literature context only |
-| Table 2 (dataset distribution) | Dataset section |
-| Table 4 (per-iteration results) and stopping rule | Method / ablation section |
-| Table 5 (uncertainty-map AUROC) | Method section, validation of the uncertainty map |
-| Table 6 (computational cost) | Results — efficiency paragraph |
-| Table 7, Figs. 1–2 | Limitations section |
-| Implementation settings | Experimental setup / implementation details |
