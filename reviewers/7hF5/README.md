@@ -101,15 +101,3 @@ The two test populations differ, so we present this as evidence under another sp
 Training and validation use Roboflow sources; the main test set is a **separate Kaggle Sentinel-2 Himalayan source**. This gives cross-source evidence within glacial-lake imagery. It does **not** prove cross-sensor, geographic, temporal or cross-task generalisation, and we limit our conclusion accordingly.
 
 ---
-
-## Changes to the main paper
-
-| Item | Where it goes in the revised paper |
-|---|---|
-| **Table 1** (related prompt-refinement approaches) | **Section 4.5, page 8** |
-| Contribution statement (four-step correction loop above) | Introduction — contributions list; Method overview |
-| Fig. 1 (step-by-step correction) | Method section, as the pipeline illustration |
-| Table 2 (YOLO variants) | Ablation study section |
-| Table 4 (dataset distribution) | Dataset section |
-| Table 3 (alternative split) | Supplementary material, referenced from the Dataset section |
-| Generalisation scope (cross-source, not cross-sensor) | Limitations / Conclusion |
