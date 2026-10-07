@@ -5,14 +5,14 @@
 
 [← Back to main README](../../README.md) · Other reviewers: [ry7S](../ry7S/README.md) · [FjD2](../FjD2/README.md)
 
-We thank the reviewer for raising these concerns. This page collects every table and figure cited in our response to Reviewer 7hF5.
+We thank the reviewer for raising these concerns. This page is a self-contained response: tables and figures are numbered locally (the number used in the submitted rebuttal text is shown beside each heading). It collects every table and figure cited in our response to Reviewer 7hF5.
 
 | Points | Topic | Evidence on this page |
 |---|---|---|
-| R1, R3, R4 | Distinction and novelty | Fig. 1, Table 8 |
+| R1, R3, R4 | Distinction and novelty | Fig. 1, Table 1 |
 | R2 | YOLO variants | Table 2 |
-| R5 | Alternative data split | Table 10 |
-| R6 | Generalisation | Table 1 |
+| R5 | Alternative data split | Table 3 |
+| R6 | Generalisation | Table 4 |
 
 ---
 
@@ -35,7 +35,7 @@ Columns: (1) input, (2) YOLOv11m-seg detection, (3) SAM2 from the YOLO box, (4) 
 
 ![Fig. 1](figures/fig01_step_by_step_correction.jpg)
 
-### Table 8: Comparison with related prompt-refinement approaches
+### Table 1: Comparison with related prompt-refinement approaches <sub>(rebuttal Table 8)</sub>
 
 | Approach | Needs training | Needs user clicks | Iterative correction | Uses model uncertainty |
 |---|---|---|---|---|
@@ -76,7 +76,7 @@ Columns: (1) input, (2) YOLOv11m-seg detection, (3) SAM2 from the YOLO box, (4) 
 
 ## R5 — Alternative data split
 
-### Table 10: Primary vs alternative data-split strategy
+### Table 3: Primary vs alternative data-split strategy <sub>(rebuttal Table 10)</sub>
 
 | Data-split strategy | Training | Validation | Test | IoU | Dice/F1 | Precision | Recall |
 |---|---|---|---|---|---|---|---|
@@ -89,7 +89,7 @@ The two test populations differ, so we present this as evidence under another sp
 
 ## R6 — Generalisation
 
-### Table 1: Dataset distribution
+### Table 4: Dataset distribution <sub>(rebuttal Table 1)</sub>
 
 | Dataset | Source | Images | Ground truth |
 |---|---|---|---|
@@ -106,10 +106,10 @@ Training and validation use Roboflow sources; the main test set is a **separate 
 
 | Item | Where it goes in the revised paper |
 |---|---|
-| **Table 8** (related prompt-refinement approaches) | **Section 4.5, page 8** |
+| **Table 1** (related prompt-refinement approaches) | **Section 4.5, page 8** |
 | Contribution statement (four-step correction loop above) | Introduction — contributions list; Method overview |
 | Fig. 1 (step-by-step correction) | Method section, as the pipeline illustration |
 | Table 2 (YOLO variants) | Ablation study section |
-| Table 1 (dataset distribution) | Dataset section |
-| Table 10 (alternative split) | Supplementary material, referenced from the Dataset section |
+| Table 4 (dataset distribution) | Dataset section |
+| Table 3 (alternative split) | Supplementary material, referenced from the Dataset section |
 | Generalisation scope (cross-source, not cross-sensor) | Limitations / Conclusion |

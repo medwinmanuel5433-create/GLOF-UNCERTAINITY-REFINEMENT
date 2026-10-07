@@ -5,21 +5,21 @@
 
 [← Back to main README](../../README.md) · Other reviewers: [ry7S](../ry7S/README.md) · [7hF5](../7hF5/README.md)
 
-We thank the reviewer for the detailed review. This page collects every table and figure cited in our response to Reviewer FjD2.
+We thank the reviewer for the detailed review. This page is a self-contained response: tables and figures are numbered locally (the number used in the submitted rebuttal text is shown beside each heading). It collects every table and figure cited in our response to Reviewer FjD2.
 
 | Points | Topic | Evidence on this page |
 |---|---|---|
-| R1–R3 | Improvement and ablation | Table 2 |
-| R4–R6 | Dataset and comparison | Table 1, Table 3 |
+| R1–R3 | Improvement and ablation | Table 1 |
+| R4–R6 | Dataset and comparison | Table 2, Table 3 |
 | R7–R13 | Reproducibility | Implementation settings |
-| R14–R18 | Iterations, uncertainty and computation | Table 4, Table 5, Table 7 |
-| R19–R22 | Limitations and novelty | Table 6, Table 8, Fig. 8, Fig. 9 |
+| R14–R18 | Iterations, uncertainty and computation | Table 4, Table 5, Table 6 |
+| R19–R22 | Limitations and novelty | Table 7, Table 8, Fig. 1, Fig. 2 |
 
 ---
 
 ## R1–R3 — Improvement and component-wise ablation
 
-### Table 2: Performance of YOLOv11 variants and component-wise ablation
+### Table 1: Performance of YOLOv11 variants and component-wise ablation <sub>(rebuttal Table 2)</sub>
 
 | # | Model / Configuration | IoU | Dice/F1 | Prec. | Recall | Spec. | Pix. Acc. | Bal. Acc. | Params |
 |---|---|---|---|---|---|---|---|---|---|
@@ -47,7 +47,7 @@ We thank the reviewer for the detailed review. This page collects every table an
 
 ## R4–R6 — Dataset and comparison
 
-### Table 1: Dataset distribution
+### Table 2: Dataset distribution <sub>(rebuttal Table 1)</sub>
 
 | Dataset | Source | Images | Ground truth |
 |---|---|---|---|
@@ -126,7 +126,7 @@ IoU ≥ 0.95 between consecutive masks is used **only as a stability stopping co
 | Distance to boundary | 0.693 |
 | Predictive entropy | 0.559 |
 
-### Table 7: Computational cost on an NVIDIA T4 GPU
+### Table 6: Computational cost on an NVIDIA T4 GPU <sub>(rebuttal Table 7)</sub>
 
 | Component | Value |
 |---|---|
@@ -145,7 +145,7 @@ The correction loop adds about **12 ms per image** (+2.9%) over direct YOLOv11m-
 
 ## R19–R22 — Limitations and novelty
 
-### Table 6: IoU and Dice under challenging conditions
+### Table 7: IoU and Dice under challenging conditions <sub>(rebuttal Table 6)</sub>
 
 | Condition | Images | IoU (YOLOv11m-seg + SAM2) | Dice (YOLOv11m-seg + SAM2) | IoU (Proposed) | Dice (Proposed) |
 |---|---|---|---|---|---|
@@ -177,15 +177,15 @@ The method slightly underperforms the baseline on single-lake images.
 
 Our contribution is **automatic, uncertainty-ranked iterative correction within YOLO–SAM2 disagreement regions**, with no user clicks and no additional trainable correction parameters.
 
-### Fig. 8: Cases where the correction fails
+### Fig. 1: Cases where the correction fails <sub>(rebuttal Fig. 8)</sub>
 
-![Fig. 8](figures/fig08_failure_cases.jpg)
+![Fig. 1](figures/fig01_failure_cases.jpg)
 
-### Fig. 9: Lakes missed by YOLOv11m-seg but found by SAM2
+### Fig. 2: Lakes missed by YOLOv11m-seg but found by SAM2 <sub>(rebuttal Fig. 9)</sub>
 
-![Fig. 9](figures/fig09_missed_by_yolo_found_by_sam2.jpg)
+![Fig. 2](figures/fig02_missed_by_yolo_found_by_sam2.jpg)
 
-Fig. 9 shows the dependence on detection: a lake missed by the YOLO **mask** can be recovered when it lies **inside a YOLO box**, because SAM2 segments the whole box. A lake that lies **outside every YOLO detection box** receives no prompt and normally cannot be recovered.
+Fig. 2 shows the dependence on detection: a lake missed by the YOLO **mask** can be recovered when it lies **inside a YOLO box**, because SAM2 segments the whole box. A lake that lies **outside every YOLO detection box** receives no prompt and normally cannot be recovered.
 
 ---
 
@@ -194,11 +194,11 @@ Fig. 9 shows the dependence on detection: a lake missed by the YOLO **mask** can
 | Item | Where it goes in the revised paper |
 |---|---|
 | **Table 8** (related prompt-refinement approaches) | **Section 4.5, page 8** |
-| Table 2 (YOLO variants + component-wise ablation) | Ablation study section |
+| Table 1 (YOLO variants + component-wise ablation) | Ablation study section |
 | Table 3(a) (same data, same test set) | Main comparison table in Results; Table 3(b) kept as literature context only |
-| Table 1 (dataset distribution) | Dataset section |
+| Table 2 (dataset distribution) | Dataset section |
 | Table 4 (per-iteration results) and stopping rule | Method / ablation section |
 | Table 5 (uncertainty-map AUROC) | Method section, validation of the uncertainty map |
-| Table 7 (computational cost) | Results — efficiency paragraph |
-| Table 6, Figs. 8–9 | Limitations section |
+| Table 6 (computational cost) | Results — efficiency paragraph |
+| Table 7, Figs. 1–2 | Limitations section |
 | Implementation settings | Experimental setup / implementation details |

@@ -5,12 +5,12 @@
 
 [← Back to main README](../../README.md) · Other reviewers: [FjD2](../FjD2/README.md) · [7hF5](../7hF5/README.md)
 
-We thank the reviewer for the positive assessment. This page collects every table and figure cited in our response to Reviewer ry7S.
+We thank the reviewer for the positive assessment. This page is a self-contained response: tables and figures are numbered locally (the number used in the submitted rebuttal text is shown beside each heading). It collects every table and figure cited in our response to Reviewer ry7S.
 
 | Point | Topic | Evidence on this page |
 |---|---|---|
-| R1 | Challenging cases | Table 9, Table 6, Figs. 2–8 |
-| R2 | Reproducibility | Implementation settings, Table 1, Table 7 |
+| R1 | Challenging cases | Table 1, Table 2, Figs. 2–8 |
+| R2 | Reproducibility | Implementation settings, Table 3, Table 4 |
 
 ---
 
@@ -18,7 +18,7 @@ We thank the reviewer for the positive assessment. This page collects every tabl
 
 We provide additional cases covering snow/ice, cloud/haze-like surroundings, low-contrast boundaries, terrain shadow and debris, plus failure examples.
 
-### Table 9: Results for each Roboflow hard-case image
+### Table 1: Results for each Roboflow hard-case image <sub>(rebuttal Table 9)</sub>
 
 | Case | Split | YOLOv11m-seg + SAM2 IoU | YOLOv11m-seg + SAM2 Dice | Proposed IoU | Proposed Dice | Proposed Precision | Proposed Recall | Clicks |
 |---|---|---|---|---|---|---|---|---|
@@ -35,7 +35,7 @@ We provide additional cases covering snow/ice, cloud/haze-like surroundings, low
 
 > **Note.** These nine images include training, validation and test samples. They illustrate behaviour on difficult cases and are **not** presented as independent generalisation evidence.
 
-### Table 6: IoU and Dice under challenging conditions
+### Table 2: IoU and Dice under challenging conditions <sub>(rebuttal Table 6)</sub>
 
 | Condition | Images | IoU (YOLOv11m-seg + SAM2) | Dice (YOLOv11m-seg + SAM2) | IoU (Proposed) | Dice (Proposed) |
 |---|---|---|---|---|---|
@@ -69,15 +69,15 @@ We provide additional cases covering snow/ice, cloud/haze-like surroundings, low
 
 ![Fig. 4](figures/fig04_low_contrast_kaggle.jpg)
 
-**Fig. 5: Terrain shadow, Roboflow images** (rows a–c correspond to Table 9)
+**Fig. 5: Terrain shadow, Roboflow images** (rows a–c correspond to Table 1)
 
 ![Fig. 5](figures/fig05_terrain_shadow_roboflow.jpg)
 
-**Fig. 6: Snow and ice cover, Roboflow images** (rows a–c correspond to Table 9)
+**Fig. 6: Snow and ice cover, Roboflow images** (rows a–c correspond to Table 1)
 
 ![Fig. 6](figures/fig06_snow_ice_roboflow.jpg)
 
-**Fig. 7: Debris-covered surroundings, Roboflow images** (rows a–c correspond to Table 9)
+**Fig. 7: Debris-covered surroundings, Roboflow images** (rows a–c correspond to Table 1)
 
 ![Fig. 7](figures/fig07_debris_roboflow.jpg)
 
@@ -106,7 +106,7 @@ We provide additional cases covering snow/ice, cloud/haze-like surroundings, low
 | Evaluation | IoU, Dice/F1, Precision, Recall on the Kaggle Sentinel-2 test set (1,640 images) |
 | Hardware | NVIDIA T4 GPU |
 
-### Table 1: Dataset distribution
+### Table 3: Dataset distribution <sub>(rebuttal Table 1)</sub>
 
 | Dataset | Source | Images | Ground truth |
 |---|---|---|---|
@@ -115,7 +115,7 @@ We provide additional cases covering snow/ice, cloud/haze-like surroundings, low
 | Test | Kaggle Glacial Lake Dataset (Sentinel-2, 10 m, Himalaya) | 1640 | 1640 |
 | **Total** | All datasets combined | **2437** | **2437** |
 
-### Table 7: Computational cost on an NVIDIA T4 GPU
+### Table 4: Computational cost on an NVIDIA T4 GPU <sub>(rebuttal Table 7)</sub>
 
 | Component | Value |
 |---|---|
@@ -135,6 +135,6 @@ We provide additional cases covering snow/ice, cloud/haze-like surroundings, low
 | Item | Where it goes in the revised paper |
 |---|---|
 | Implementation settings (above) | Experimental setup / implementation details section |
-| Table 1 (dataset distribution) | Dataset section |
-| Table 6 (challenging conditions) + Figs. 2–4, 8 | Results — qualitative and condition-wise analysis; failure cases in Limitations |
-| Table 9, Figs. 5–7 | Supplementary material (contains training/validation images) |
+| Table 3 (dataset distribution) | Dataset section |
+| Table 2 (challenging conditions) + Figs. 2–4, 8 | Results — qualitative and condition-wise analysis; failure cases in Limitations |
+| Table 1, Figs. 5–7 | Supplementary material (contains training/validation images) |
