@@ -33,8 +33,8 @@ We thank the reviewer for the detailed review. This page is a self-contained res
 | 8 | + Boundary-aware box and points | 0.6804 | 0.8098 | 0.8024 | 0.8174 | 0.9692 | 0.9491 | 0.8933 | 103.2M |
 | 9 | + Random clicks (same number) | 0.7092 | 0.8299 | 0.8499 | 0.8108 | 0.9781 | 0.9559 | 0.8944 | 103.2M |
 | 10 | + Distance-based clicks (same number) | 0.7049 | 0.8269 | 0.8436 | 0.8109 | 0.9770 | 0.9550 | 0.8940 | 103.2M |
-| **11** | **+ Uncertainty-guided correction (proposed)** | **0.7876** | **0.8222** | **0.7636** | **0.8126** | **0.9867** | **0.9802** | **0.8997** | **103.2M** |
-| 12 | Full framework (box, points and correction) | 0.7876 | 0.8222 | 0.7636 | 0.8126 | 0.9867 | 0.9802 | 0.8997 | 103.2M |
+| **11** | **+ Uncertainty-guided correction (proposed)** | **0.7876** | **0.8816** | **0.7636** | **0.8126** | **0.9867** | **0.9802** | **0.8997** | **103.2M** |
+| 12 | Full framework (box, points and correction) | 0.7876 | 0.8816 | 0.7636 | 0.8126 | 0.9867 | 0.9802 | 0.8997 | 103.2M |
 
 **Reading the ablation**
 
