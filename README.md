@@ -35,8 +35,8 @@ Full tables and figures: [docs/GLOF_RESULTS.pdf](docs/GLOF_RESULTS.pdf)
 | 9 | Box prompt + random clicks (same number) | 0.7092 | 0.8299 | 0.8499 | 0.8108 | 0.9781 | 0.9559 | 0.8944 |
 | 10 | Box prompt + distance-based clicks (same number) | 0.7049 | 0.8269 | 0.8436 | 0.8109 | 0.9770 | 0.9550 | 0.8940 |
 | 11 | Box prompt + predictive-entropy clicks | 0.7232 | 0.8394 | 0.8648 | 0.8154 | 0.9805 | 0.9586 | 0.8980 |
-| **12** | **Box prompt + attention-entropy clicks (proposed)** | **0.7876** | **0.8222** | **0.7636** | **0.8126** | **0.9867** | **0.9802** | **0.8997** | **103.2M** |
-| **13** | **Full framework (boundary-aware box, points and attention-entropy clicks)** | **0.7876** | **0.8222** | **0.7636** | **0.8126** | **0.9867** | **0.9802** | **0.8997** | **103.2M** |
+| **12** | **Box prompt + attention-entropy clicks (proposed)** | **0.7876** | **0.8816** | **0.7636** | **0.8126** | **0.9867** | **0.9802** | **0.8997** | **103.2M** |
+| **13** | **Full framework (boundary-aware box, points and attention-entropy clicks)** | **0.7876** | **0.8816** | **0.7636** | **0.8126** | **0.9867** | **0.9802** | **0.8997** | **103.2M** |
 
 **Uncertainty map vs. SAM2 error pixels** (AUROC): attention entropy 0.728, distance to boundary 0.693, predictive entropy 0.559.
 
